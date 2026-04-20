@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title> Benny Grimes Portfolio </title>
+	<meta name="viewport" content="width=device-width,intial-scale=1.0">
+	<link href="style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+	<header>
+
+		<img src="img/profile_pic.jpg" alt="picture of benny grimes">
+
+
+		<h1> Benny Grimes </h1>
+		<h2> Aspiring Web Developer</h2>
+
+		<div class="clear"></div>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="Resume.html">Resume</a></li>
+			<li><a href="Interests.html">Interests</a></li>
+			<li><a href="Donate.html">Donate</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<h2>Donate</h2>
+		<form action="#" method="POST">
+			<fieldset>
+				<legend>Personal Information</legend>
+
+				<label>Title/Gender:</label>
+				<input type="radio" id="title_mr" name="title" value="Mr.">
+				<label for="title_mr">Mr.</label>
+				<input type="radio" id="title_ms" name="title" value="Ms.">
+				<label for="title_ms">Ms.</label>
+				<input type="radio" id="title_mx" name="title" value="Mx.">
+				<label for="title_mx">Mx.</label>
+				<br><br>
+
+				<label for="first_name">First Name:</label>
+				<input type="text" id="first_name" name="first_name" required>
+				<br><br>
+
+				<label for="last_name">Last Name:</label>
+				<input type="text" id="last_name" name="last_name" required>
+				<br><br>
+
+				<label for="email">Email Address:</label>
+				<input type="email" id="email" name="email" required>
+				<br><br>
+
+				<label for="date">Date:</label>
+				<input type="date" id="date" name="date" min="2024-01-01" max="2030-12-31" required>
+				<br><br>
+
+				<label for="phone_type">Phone Type:</label>
+				<select id="phone_type" name="phone_type">
+					<option value="mobile">Mobile</option>
+					<option value="home">Home</option>
+					<option value="work">Work</option>
+				</select>
+				<br><br>
+
+				<label for="phone_number">Phone Number:</label>
+				<input type="tel" id="phone_number" name="phone_number" minlength="10" maxlength="15" pattern="[0-9]*" inputmode="numeric" oninput="this.value=this.value.replace(/\D/g,'')" required>
+				<br><br>
+			</fieldset>
+
+			<fieldset>
+				<legend>Payment Information</legend>
+
+				<label for="price">Donation Amount ($):</label>
+				<input type="number" id="price" name="price" min="0" step="0.01" required>
+				<br><br>
+
+				<label for="cc_number">Credit Card #:</label>
+				<input type="text" id="cc_number" name="cc_number" minlength="13" maxlength="19" pattern="[0-9]*" inputmode="numeric" oninput="this.value=this.value.replace(/\D/g,'')" required>
+				<br><br>
+
+				<label for="security_code">Security Code:</label>
+				<input type="text" id="security_code" name="security_code" minlength="3" maxlength="4" pattern="[0-9]*" inputmode="numeric" oninput="this.value=this.value.replace(/\D/g,'')" required>
+				<br><br>
+			</fieldset>
+
+			<input type="checkbox" id="agree_terms" name="agree_terms" required>
+			<label for="agree_terms">Agree to Terms?</label>
+			<br><br>
+
+			<input type="submit" value="Submit Donation">
+		</form>
+	</main>
+
+	<footer>
+		<p>© 2026 Benny Grimes</p>
+		<p><a href="mailto:benjamin.grimes1@mga.edu">Email:benjamin.grimes1@mga.edu</a></p>
+		<a href="resume.pdf" target="_blank" class="btn">Download Resume</a>
+	</footer>
+</body>
